@@ -1,0 +1,131 @@
+/* estrellas formulario */
+
+input[type="radio"] {
+  display: none; 
+}
+
+.c_label {
+  color: grey;
+  font-size: 35px;
+}
+
+.clasificacion {
+  direction: rtl;
+  unicode-bidi: bidi-override; 
+  text-align:center;
+
+}
+
+.c_label:hover,
+.c_label:hover ~ label {
+  color: orange;
+}
+
+input[type="radio"]:checked ~ label {
+  color: orange;
+}
+
+/*
+input[type="radio"]:checked ~ label:hover {
+  color: grey;
+}
+*/
+
+
+/* formulario */
+
+.centrar_boton { 
+
+	width:490px;
+	margin: 10px auto 0px auto;
+  
+}
+
+.centrar_formulario { 
+
+	width:490px;
+	margin: 30px auto 0px auto; 
+	display:none;
+  
+}
+/* formulario */
+
+
+/* Comentarios */
+.texto_valoraciones{
+
+	text-align:center; 
+	margin-top:45px; 
+	color: #666; 
+	font-size:30px;
+	font-family: 'Ceviche One', cursive;	
+	
+}
+
+.input_ordenar{
+	
+	max-width:500px; 
+	margin: 20px auto 0px auto;
+
+}
+
+.main_comentarios {
+	
+	max-width:700px; 
+	margin: 30px auto 0px auto;
+
+}
+
+.eliminar{ 
+
+	float:right;
+	
+}
+
+.nombre_fecha {
+	
+	width:100%; 
+	padding-left:10px; 
+	margin-top:10px; 
+	font-size:16px;  
+	font-family:'Times New Roman', Times, serif;
+
+}
+
+.estrellas {
+	
+	width:100%; 
+	margin-top:10px
+	
+}
+
+
+.correo {
+	 
+	border: 2px solid #666; 
+	width:100%; 
+	margin-top:10px;
+	padding-left:10px;
+	font-size:16px; 
+	font-family:'Times New Roman', Times, serif;
+	border-radius:7px;
+	
+}
+
+.comentario {
+	
+	 background-color:#f4f4f4;  
+	 width:100%; 
+	 margin-top:15px; 
+	 padding:5px; 
+	 border: 1px dashed #666666; 
+	 border-radius:7px
+
+}
+
+.alert_rojo { 
+
+	margin: 35px auto 0px auto;
+	width:1200px;
+	
+}

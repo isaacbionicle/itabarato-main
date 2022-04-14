@@ -1,0 +1,68 @@
+.cabecera2 { 
+			background-color: #333; /*#F90*/
+			height:100px;
+		   }
+.tadmin{ 
+			text-align:center; 
+			font-size: 50px; 
+			}
+			
+.formulario { 
+				max-width:700px; 
+				width: 100%; margin: 
+				50px auto 0px auto 
+				}
+				
+.tcat{  /*categorias*/
+			text-align:center; 
+			font-size: 50px; 
+			}
+
+.centrar{  /*PARA CENTRAR LOS ALERT*/
+			text-align:center;
+			
+			}
+
+.mostrarcat { 
+				margin: 50px auto 0px auto; 
+				max-width:900px; 
+				width:100%;
+				min-height: 300px;
+				}
+.ocultar { 
+			display:none
+			
+			}
+			
+.centrar-pag{
+	
+	        text-align:center;
+			margin-top:140px;
+	
+}
+
+.color-pag{
+	
+		color:#C30;
+	
+	}
+
+
+.absoluta{
+	
+	position:absolute;
+	top:100px;
+	left:50%;
+	margin-left:-160px;
+	
+}
+
+.color{
+	color:red;
+	
+}
+
+.fuente{
+	font-size:25px;
+	font-family: 'Ceviche One', cursive;
+	}

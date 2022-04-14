@@ -1,0 +1,220 @@
+/* CSS Documento */
+
+
+.borde{ border: 3px solid #F00}
+.cabecera { 
+			background-color: white; /* FONDO DE LA CABECERA (HEADER)*/ 
+			background: gray;
+			height:180px; /*LO ALTO DEL HEADER*/
+			background: -webkit-radial-gradient(center,ellipse,gray,#03000B);
+           background: -moz-radial-gradient(center,ellipse,gray,#03000B);
+		   
+			
+
+		   }
+			
+nav {   
+         margin-right:200px;
+		height:80px;/*alto del nav*/
+		margin-top: -150px;/* para poder subir junto a cabecer es decir que quede dentro */
+		text-align:right; /*que este aliniado al centro*/
+		}
+		
+.slider { 
+		 
+		 margin-top:20px;/*para bajarlo*/
+		 }
+		 
+.main { 
+		width:95%; 
+		max-width:1200px; /*EL ANCHO MAXIMO*/
+		min-height: 600px; /*EL ALTO MINIMO*/
+		margin: 25px auto 20px auto;/*PARA CENTRAR EL MAIN PARAMETROS  MARGIN TOP,RIGHT,BOTTOM,LEFT */
+		}
+
+.main .productosmain { 
+						width:24.4%;
+						float:left; /*PARA QUE FLOTEN A LA IZQ LOS DIV(PRODUCTOS)*/
+						margin-left:5px;/*PARA QUE NO SE JUNTEN LOS PRODUCTOS*/ 
+						margin-top:5px;/*IGUAL PARA QUE NO SE JUNTEN */
+						-webkit-box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.66);/*SOMBRA DE LA CAJA*/
+						-moz-box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.66);
+						box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.66);
+						
+						
+						}
+
+.main .limpiar { 
+				clear:both; 
+				}
+				
+
+.main .productosmain .precio { background-color: #3600FF; 
+								color: #FFF; 
+								font-weight:bold; 
+								padding:10px; 
+								text-align:center
+								}
+								
+footer { width:100%; /*100 de la pantalla*/
+		 height:110px; 
+		 background-color:#333; 
+		 margin-top:80px;
+		 text-align:center;
+		 padding: 35px; /*al ponerle padding el ancho quedara mas haya de la pantalla y provocara que aparesca un scroll*/
+		 box-sizing:border-box; /*esta propiedad a nos ayuda que nos aparezca el scroll*/
+	 
+	
+	}
+	
+footer p { 
+			color:#FFF;
+			}
+			
+.fuente{
+	font-size:25px;
+	font-family: 'Ceviche One', cursive;
+	}
+	
+/*paginador*/
+.centrar-pag{
+	
+	        text-align:center;
+			margin-top:100px;
+			clear:both;
+	
+}
+.color-pag{
+	
+		color:#C30;
+	
+	}
+	
+/*PAGINADOR*/
+	
+
+/*buscador*/
+
+.form1{
+	
+	width:300px;
+
+	
+}
+.fieldset1{ 
+
+	background-color:#fff;
+	padding:0px 0px 0px 40px;
+	border-radius:5px;
+	display:inline-block;
+}
+.input1,.button1{
+	
+	position:relative;
+	float:left;
+	width:200px;
+	height:30px;
+	padding:0px;
+	
+}
+.input1{ 
+
+	border:none; 
+	color:#666; 
+	z-index:2;
+	
+}
+.button1{ 
+
+	width:50px; 
+	border:1px solid #666; 
+	background-color: #333;
+	transform:translate(-50px,0);
+	transition-duration:.3s;
+	
+}
+.fa{ 
+
+	transform:translate(-200px,0px); 
+	transition:all .1s ease-in-out; 
+	color: #999;
+	
+}
+.input1:focus{
+	
+	outline:none
+	 
+}
+.input1:focus + .button1{ 
+
+	transform:translate(0,0); 
+	transition-duration:.3s; 
+	font-size:17px;
+	
+}
+
+.input1:focus + .button1 .fa{
+	transform:translate(0,0);
+	transition-duration:.7s;
+	color: #FFF
+	
+}
+
+
+				
+/*buscador*/
+
+/* carrito */
+.carrito{ 
+
+	position:fixed; 
+	width:500px;
+	left:100%;
+	top:200px;  
+	background-color: #FFF;
+	border:1px #666 solid; 
+	border-radius: 4px 0px 0px 4px; 
+	
+	transition: margin-left 1s;
+	-webkit-transition:margin-left 1s;
+	-moz-transition:margin-left 1s;
+	-ms-transition:margin-left 1s;
+	-o-transition:margin-left 1s;
+	z-index:99;
+	
+	}
+	
+.carrito:hover{
+	
+	margin-left:-500px;
+	
+	
+	}
+
+
+/* carrito */
+		
+				
+@media screen and (max-width:900px){/*CUANDO LLEGAS AL  ANCHO DE LA PANTALLA DE 900PX*/
+	
+		.main .productosmain { /*PARA QUE APARESCAN 3 PRODUCTOS*/
+								width:32.4%;
+								
+								}
+	}
+	
+@media screen and (max-width:600px){
+	
+		.main .productosmain { /*PARA QUE APARESCAN 2 PRODUCTOS*/
+								width:48.4%;
+								}
+	}
+	
+@media screen and (max-width:1323px){
+	
+		.logo { 
+		
+				display:none;
+								
+			 }
+	}

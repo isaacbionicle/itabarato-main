@@ -1,0 +1,6 @@
+User-agent: * 
+Disallow:/administracion/
+
+
+x10hostin
+user=itabarat
