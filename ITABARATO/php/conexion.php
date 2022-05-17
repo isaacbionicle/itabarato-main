@@ -8,7 +8,7 @@ if (!$conexion){// si conexion es igual a false
 	
 	}
 	
-mysqli_select_db($conexion,"itabaratoags") or die ("Error al conectar con la base de datos ".mysqli_error($conexion));
+mysqli_select_db($conexion,"prueba") or die ("Error al conectar con la base de datos ".mysqli_error($conexion));
 // se selecciona la base de datos             y si no se celecciona mostrara un error con la base de datos
 function cerrarconexion(){
 	
