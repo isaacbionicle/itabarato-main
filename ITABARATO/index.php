@@ -117,7 +117,7 @@ bounceInDown para que rebote y el el data es para la duracion el navegadro
 	}
 	?>
 	</ul></li>
-	<li class="topmenu"><a href="contacto.php" style="width:220px;height:70px;line-height:70px;"><img />Acerca de IB</a></li>
+	
 	<li class="topmenu"><a href="#" style="height:70px;line-height:70px;"><span><img src="CSS3 Menu_files/css3menu1/register.png" alt=""/>SESIONES</span></a>
 	<ul>
 		<li><a href="#" onclick="mostrar_ventana_modal()">INICIAR SESIÓN</a></li>

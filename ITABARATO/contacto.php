@@ -8,7 +8,7 @@ $registros1=mysqli_query($conexion,"SELECT * FROM categorias ORDER BY categoria 
 <html>
 <head>
 <meta charset="utf-8">
-<title>Acerca de IB</title>
+
 <link rel="stylesheet" href="iconos/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/estilos.css">
 <link rel="stylesheet" href="css/normalizar.css">

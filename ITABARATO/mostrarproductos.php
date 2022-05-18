@@ -85,7 +85,7 @@ function f_ordenar(id){
 	}
 	?>
 	</ul></li>
-	<li class="topmenu"><a href="contacto.php" style="width:220px;height:70px;line-height:70px;"><img alt=""/>Acerca de IB</a></li>
+	
 	<li class="topmenu"><a href="#" style="height:70px;line-height:70px;"><span><img src="CSS3 Menu_files/css3menu1/register.png" alt=""/>ZONA PRIVADA</span></a>
 	<ul>
 		<li><a href="#" onclick="mostrar_ventana_modal()">INICIAR SESIÓN</a></li>
