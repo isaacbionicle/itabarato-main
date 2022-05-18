@@ -3,7 +3,7 @@ session_start(); //Creamos una session
 
 
 if(!isset($_SESSION['administrador'])){ //si no existe  entonces entra y verficara el sig if la inf ingrsada
-	if($_POST['nombre']=="jonathan" && $_POST['password']=="123456"){
+	if($_POST['nombre']=="isaac" && $_POST['password']=="123"){
 	
 		$_SESSION['administrador']=$_POST['nombre'];//creamos una variable sesssion y la llamamos administrador y le asignamose el valor de nombre */
 	
