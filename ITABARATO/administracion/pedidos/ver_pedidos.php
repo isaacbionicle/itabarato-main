@@ -103,6 +103,7 @@ function mostrar_mensaje(){
   			<li><a href="../productos/formaniadirproductos.php">Añadir productos</a></li>
 			<li><a href="../categorias/formaniadircategorias.php">Categorias</a></li>
 			<li><a href="../clientes/">Clientes</a></li>
+			<li><a href="../pedidos/ver_estadistica.php">Estadisticas</a></li>
 			<li><a href="../comentarios/mostrar_comentarios.php">Comentarios</a></li>
   		</ul>
   	</nav>
