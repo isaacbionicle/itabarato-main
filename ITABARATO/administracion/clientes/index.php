@@ -62,6 +62,7 @@ $registros1=mysqli_query($conexion,"select * from clientes WHERE validado='1' or
   			<li><a href="../productos/formaniadirproductos.php">Añadir productos</a></li>
 			<li><a href="../categorias/formaniadircategorias.php">Categorias</a></li>
 			<li><a href="../clientes/">Clientes</a></li>
+			<li><a href="../pedidos/ver_estadistica.php">Estadisticas</a></li>
 			<li><a href="../comentarios/mostrar_comentarios.php">Comentarios</a></li>
   		</ul>
   	</nav>
