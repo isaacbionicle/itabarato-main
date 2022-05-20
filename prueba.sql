@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-05-2022 a las 14:26:33
--- Versión del servidor: 10.4.19-MariaDB
--- Versión de PHP: 8.0.6
+-- Tiempo de generación: 20-05-2022 a las 07:26:00
+-- Versión del servidor: 10.4.22-MariaDB
+-- Versión de PHP: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `prueba`
+-- Base de datos: `pruebas`
 --
 
 -- --------------------------------------------------------
@@ -154,6 +154,14 @@ CREATE TABLE `comentarios` (
   `id_categoria` int(11) NOT NULL,
   `estado` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `comentarios`
+--
+
+INSERT INTO `comentarios` (`id_comentario`, `fecha`, `nombre`, `comentario`, `puntuacion`, `correo`, `url`, `id_cliente`, `id_producto`, `id_categoria`, `estado`) VALUES
+(50, '2022-05-20 03:56:48', 'Marta 9', 'esta muy interesante el producto ', 1, b'1', 'https://www.youtube.com/v/mc8ElathI7I', 9, 22, 4, 0),
+(51, '2022-05-20 03:59:56', 'David 17', 'Monitor excelente calidad ', 5, b'1', 'https://www.youtube.com/v/w8NQimujq2A', 17, 42, 5, 0);
 
 -- --------------------------------------------------------
 
@@ -309,7 +317,9 @@ CREATE TABLE `pedidos` (
 INSERT INTO `pedidos` (`pedido`, `producto`, `cantidad`, `precio_producto`, `id_cliente`) VALUES
 (1, 'Dell UltraSharp S2715H 27 LED', 1, 2790, 1),
 (1, 'Canon Pixma MX475 WiFi/Fax/Duplex', 1, 5000, 1),
-(2, 'BenQ XL2730Z 27 LED 144Hz QHD', 1, 5990, 1);
+(2, 'BenQ XL2730Z 27 LED 144Hz QHD', 1, 5990, 1),
+(3, 'Canon Pixma iP7250 Impresora WiFi', 1, 5000, 9),
+(4, 'BenQ BL3201PT LED 32 Ultra HD 4K', 1, 8990, 17);
 
 -- --------------------------------------------------------
 
@@ -331,7 +341,9 @@ CREATE TABLE `pedidos2` (
 --
 
 INSERT INTO `pedidos2` (`fecha_pedido`, `total_pedido`, `envio`, `pago`, `estado`, `pedido`) VALUES
-('2019-05-14 17:07:03', 5990, b'0', 'Efectivo', 1, 2);
+('2019-05-14 17:07:03', 5990, b'0', 'Efectivo', 1, 2),
+('2022-05-20 03:54:01', 5000, b'0', 'Transferencia', 0, 3),
+('2022-05-20 03:58:58', 8990, b'0', 'Efectivo', 0, 4);
 
 -- --------------------------------------------------------
 
@@ -393,6 +405,39 @@ INSERT INTO `productos` (`id_producto`, `nombre`, `precio`, `descripcion`, `id_c
 (54, 'Asus ROG GX700VO-GC009T i7-6820HK/32GB/256GB 256SSD/GTX980/17.3', 50100, 'ROG GX700 es el primer portátil gaming con refrigeración líquida. Su diseño proporciona un equipo portátil con un potencial de overclocking que puede competir con los equipos de sobremesa más extremos. El GX700 incorpora Windows 10 Home, un procesador Intel® Mobile K-SKU acelerado, una gráfica NVIDIA® GeForce® GTX? 980 y 32 GB de RAM DDR4 para que disfrutes del rendimiento más extremo donde tú quieras.\r\n\r\nCaracterísticas:\r\n\r\n    El primer portátil gaming con refrigeración líquida: Disfruta de lo mejor de ambos mundos\r\n    ROG GX700 es el primer portátil gaming con un módulo de refrigeración líquida desmontable para proporcionar el overclocking más extremo. Por sí solo, el GX700 cabe perfectamente en tu mochila y tiene una pegada que noquea los modelos de la competencia sin despeinarse. Conecta el módulo de refrigeración líquida y podrás acelerar el GX700 a niveles de rendimiento propios de los PC de sobremesa gaming.\r\n    Hydro Overclocking System exclusivo de ROG\r\n    El exclusivo Hydro Overclocking System lleva el rendimiento overclocking del GX700 a nueva cotas para que arrases en el campo de batalla. El módulo de refrigeración bombea líquido refrigerante a través de un circuito que transporta el calor del modo más eficiente desde los componentes críticos del PC a los dos radiadores situados en el módulo. La conexión ROG patentada asegura la estanqueidad para que el líquido fluya sin fugas* entre el PC y el módulo. Hydro Overclocking System ayuda a gestionar los excesos de temperatura ocasionados por la GPU GeForce GTX980 acelerada, permitiéndote alcanzar un 20 % más de rendimiento sin comprometer la estabilidad de este pequeño monstruo. Por sí mismo, el diseño térmico dual del ROG GX700 también permite alcanzar niveles bestiales de rendimiento.\r\n    Líquido refrigerante de alto rendimiento con una formulación especial\r\n    El líquido refrigerante está formulado para proteger los componentes y materiales internos como aleaciones de hierro, acero y cobre contra la corrosión. La reducida tasa de agotamiento del inhibidor ácido-orgánico elimina la necesidad de emplear aditivos suplementarios contra la erosión, reduciendo el tiempo habitualmente dedicado a probar inhibidores y aditivos. Hydro Overclocking System permite disminuir las temperaturas de la CPU y GPU un 31 % y 33 % respectivamente.\r\n    Mundos gaming en 4K UHD\r\n    ROG GX700 es el primer portátil gaming de 17 pulgadas capaz de sumergirte en ambientes 4K UHD reales. El Hydro Overclocking System mejora el rendimiento y la estabilidad general del GX700 para que disfrutes de los juegos como se debe hacer: en 4K UHD.\r\n\r\nEspecificaciones:\r\n\r\n    Procesador Intel® Core? i7-6820HK (4 Cores, 8M Cache, 2.7GHz hasta 3.6GHz)\r\n    Memoria RAM  32GB\r\n    Disco duro 256GB + 256GB SSD PCIEx4\r\n    Almacenamiento óptico No incluido\r\n    Pantalla  17.3\" LED Retroiluminado / Slim / 300nits / Full HD (1920x1080/16:9) / Anti-Glare / NTSC:72% / IPS;\r\n    Controlador gráfico NVIDIA® GeForce® GTX980\r\n    Conectividad 802.11ac (Dual band) + Intel® WiDi Bluetooth 4.0\r\n    Cámara de portátil\r\n    Micrófono incorporado\r\n    Batería 6 celdas\r\n    Conexiones\r\n        3 x USB 3.0\r\n        1 x USB 3.1 Tipo C (Gen 1)\r\n        1 x USB 3.1 Tipo C (Gen 2) con Thunderbolt\r\n        1 x Salida Auriculares\r\n        1 x Entrada Micrófono\r\n        1 x Conector RJ45 LAN\r\n        1 x HDMI 1 x Mini Display Port\r\n        1 x Orificio Bloqueo Kensington\r\n        1 x Entrada de Corriente\r\n    Lector de Tarjetas SD/MMC\r\n    Accesorios incluidos\r\n        2 x adaptador de corriente\r\n        1 x Cable de corriente\r\n        1 x Docking (Liquid Cooling System)\r\n        1 x Ratón Gaming\r\n        1 x Maleta Gaming\r\n    Sistema operativo  Windows® 10 Original (64Bits)\r\n    Dimensiones (Ancho x Profundidad x Altura)429 x 309 x 33,5~38,5 mm\r\n    Peso  3,6 Kg\r\n    Color Plateado.', 1, 1, -1),
 (61, 'Owlotech MS-200 Ratón Gaming 2400 DPI', 580, '    Sensor Óptico de alta resolución y 4 niveles: El MS200 cuenta con un sensor óptico de alta resolución y rápida respuesta además de 4 niveles distintos seleccionables a gusto del jugador 800/1200/1600/2400 DPI\r\n\r\n    Iluminación en cada estado de DPI: Cada uno de los perfiles cuentan con un tipo de iluminación diferente 800 Púrpura 1200 Azul 1600 Rosa 2400 Rojo para que selecciones la sensibilidad e iluminación que más se adapte a ti.\r\n\r\n    Diseño ergonómico adaptable a la mano: MS200  de OG Gaming dispone de un diseño atractivo y sobre todo efectivo y ergonómico, haciendo las largas horas de juego mucho más cómodas\r\n\r\n    4 perfiles y colores de iluminación\r\n    Sensor optico con 2400DPI\r\n    Diseño ergonómico\r\n    Material de alta calidad\r\n    Pies de polymero de alta calidad\r\n    Diseño exclusivo con iluminación de alta intensidad ', 6, 0, -1),
 (62, 'puerta', 2020, 'puerta', 8, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `venta`
+--
+
+CREATE TABLE `venta` (
+  `id` int(11) NOT NULL,
+  `date_at` date DEFAULT NULL,
+  `val` double DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `venta`
+--
+
+INSERT INTO `venta` (`id`, `date_at`, `val`) VALUES
+(1, '2019-01-01', 100),
+(2, '2019-01-02', 80),
+(3, '2020-03-13', 205),
+(4, '2021-01-01', 323),
+(5, '2021-02-05', 110),
+(6, '2021-07-06', 40),
+(7, '2022-01-07', 80),
+(8, '2022-02-08', 220),
+(9, '2022-03-10', 95),
+(10, '2022-04-09', 120),
+(11, '2022-05-11', 249),
+(12, '2022-05-12', 157),
+(13, '2022-05-13', 199),
+(14, '2022-06-14', 30),
+(15, '2022-06-15', 290);
 
 --
 -- Índices para tablas volcadas
@@ -467,6 +512,12 @@ ALTER TABLE `productos`
   ADD KEY `id_categoria` (`id_categoria`);
 
 --
+-- Indices de la tabla `venta`
+--
+ALTER TABLE `venta`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -492,7 +543,7 @@ ALTER TABLE `codigos`
 -- AUTO_INCREMENT de la tabla `comentarios`
 --
 ALTER TABLE `comentarios`
-  MODIFY `id_comentario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `id_comentario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT de la tabla `imagenes`
@@ -517,6 +568,12 @@ ALTER TABLE `interruptor_stock`
 --
 ALTER TABLE `productos`
   MODIFY `id_producto` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+
+--
+-- AUTO_INCREMENT de la tabla `venta`
+--
+ALTER TABLE `venta`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Restricciones para tablas volcadas
